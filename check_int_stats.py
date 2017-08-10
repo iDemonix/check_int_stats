@@ -46,7 +46,7 @@ def descrToIndex(ifDescr):
             debug('Fetching ifDescr table over SNMP and storing in memcached')
             walk = session.walk('1.3.6.1.2.1.2.2.1.2')
         except:
-            exitMessage('Could not walk remote host ifTable')
+            exitMessage('Could not walk remote host ifTable', 3)
                 
         # for each interface returned
         for item in walk:
